@@ -1,0 +1,25 @@
+name: Executar Script Diariamente
+
+on:
+  schedule:
+    # Cron job para rodar todos os dias às 17:00 (horário BRT)
+    - cron: "0 20 * * *"
+
+jobs:
+  rodar-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout do repositório
+      uses: actions/checkout@v2
+
+    - name: Instalar dependências
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+        pip install -r requirements.txt
+
+    - name: Rodar o script
+      run: |
+        source venv/bin/activate
+        python caminho/do/seu/script.py
