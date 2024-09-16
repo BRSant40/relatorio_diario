@@ -22,4 +22,4 @@ jobs:
     - name: Rodar o script
       run: |
         source venv/bin/activate
-        python caminho/do/seu/script.py
+        python relatorio_diario/main.py
