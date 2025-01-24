@@ -69,7 +69,7 @@ def enviando_email(token, token_dados, data_compra, data_venda):
 
     email = outlook.CreateItem(0)
 
-    email.To = "bruninho_123vini@hotmail.com"
+    email.To = "exemplo_email@hotmail.com"
     email.Subject = "Relatório de Mercado"
     email.Body = f"""Segue o Relatório das Criptos:
 
